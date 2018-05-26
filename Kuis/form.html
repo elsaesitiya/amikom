@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.username{
+		color:rgba(100,100,100,.5);
+	}
+	.email{
+		color:rgba(100,100,100,.5);
+	}
+	</style>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		/*$("input").focus(function(){
+				$(this).css("background-color","green");
+			});
+			$("input").blur(function(){
+				$(this).css("background-color","red");
+			});
+			$("button").click(function(){
+				$("input").css("background-color","white");
+			});
+			*/
+			$("#username").focus();
+			$(".username").hide();
+			$(".email").hide();
+
+			$("#username").keypress(function(){
+				$(".username").show();
+			});
+			$("#email").keypress(function(){
+				$(".username").hide();
+			});
+			$("#email").keypress(function(){
+				$(".email").show();
+			});
+			$("#username").keypress(function(){
+				$(".email").hide();
+			});
+			$("input").mouseleave(function(){
+				$("p").hide();
+			});
+			$(".submit").click(function(){
+				alert("Termikasaih sudah mengisi data");
+			});
+		});
+	</script>
+</head>
+<body>
+<form>
+	<p class="username"> Typing username.....</p>
+		Username : <input id="username" type="text"></input><br>
+	<p class="email">Typing Email....</p>
+		Email : <input id="email" type="text"></input>
+</form>
+<button class="submit">Submit</button>
+<button class="reset">Reset</button>
+
+</body>
+</html>
